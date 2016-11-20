@@ -1,0 +1,135 @@
+
+/*@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);*/
+
+*, *::after, *::before{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	margin: 0 auto;
+	background: white;
+}
+
+header{
+	width: 100%;
+	height: 80px;
+	background: #3498db;
+}
+
+nav{
+	height: 80px;
+	width: 100%;
+}
+
+nav ul{
+	width: 50%;
+	float: right;
+	height: 80px;
+}
+
+nav ul li{
+	font-family: 'Roboto Mono';
+	display: inline-block;
+	float: left;
+	height: 80px;
+	line-height: 80px;
+	width: 50%;
+	text-align: center;
+}
+
+nav ul li a{
+	transition: all ease-in-out .5s;
+	text-decoration: none;
+	display: block;
+	color: white;
+}
+
+nav ul li a:hover{
+	transition: all ease-in-out .5s;
+	color: black;
+	background: white;
+	border-bottom: 1px solid #3498db;
+}
+
+nav ul li a::visited{
+	background: white;
+	color: black;
+}
+
+nav h1{
+	float: left;
+	width: 50%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-family: 'Roboto Mono';
+	color: white;
+}
+
+.cadastroAtendimento{
+	background: white;
+}
+
+#formCadastro{
+	width: 50%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#formCadastro label{
+	font-family: 'Roboto Mono';
+	display: block;
+}
+
+#formCadastro input{
+	width: 100%;
+	height: 30px;
+	font-family: 'Roboto Mono';
+}
+
+#formCadastro h1{
+	font-family: 'Roboto Mono';
+	width: 100%;
+	text-align: center;
+	background: #3498db;
+	color: white;
+	font-size: 1.3em;
+	padding: 1%;
+}
+
+#formCadastro input[type="submit"]{
+	height: 40px;
+	margin-top: 10px;
+	color: white;
+	font-size: 1.1em;
+	background: #3498db;
+}
+
+#lista{
+	width: 50%;	
+	margin: 0 auto;
+	border: solid 1px; 
+	margin-top: 20px;
+}
+
+#lista > ul > li{
+	list-style: none;
+	height: 25px;
+	line-height: 25px;
+	padding-left: 1%;
+	border-top: solid 1px;
+}
+
+#lista > h1{
+	font-family: 'Roboto Mono';
+	font-size: 1.5em;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #3498db;
+	color: white;
+}

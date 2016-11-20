@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Software de Cadastro de Atendimentos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<%- include('header.ejs'); %>
+
+  	<div id="lista">
+  		<h1>Lista de Atendimentos</h1>
+  		<ul>
+  			<%if (atendimentos.length > 0) {%>
+      			<%atendimentos.forEach(function(a){%>
+      				<li class="itens"><%= a.cliente + ", " + a.endereco + ", " + a.numero + ", " + a.bairro + ", " + a.cep + ", " + a.cidade + ", " + a.uf%></li>
+      			<%});%>
+    		<%}%>
+  		</ul>
+  	</div>
+  </body>
+</html>
+
+
+		
