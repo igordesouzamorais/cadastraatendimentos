@@ -24,7 +24,19 @@ db.once('open', function() {
   
 });
 
-Mongoose.connect('mongodb://127.0.0.1:27017/atendimento');
+//Mongoose.connect('mongodb://127.0.0.1:27017/atendimento');
+
+var uristring = 
+  process.env.MONGODB_URI || 
+  'mongodb://localhost/atendimento';
+
+db.connect(uristring, function (err, res) {
+  if (err) { 
+    console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+    console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
