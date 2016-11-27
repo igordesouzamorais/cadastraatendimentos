@@ -5,12 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-
+var autoIncrement = require('mongoose-auto-increment');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var Mongoose = require('mongoose');
-var db = Mongoose.connection;
+var db = Mongoose.connection;    
 
 var app = express();
 
@@ -24,8 +24,6 @@ db.once('open', function() {
   
 });
 
-//Mongoose.connect('mongodb://127.0.0.1:27017/atendimento');
-
 var uristring = 
   process.env.MONGODB_URI || 
   'mongodb://localhost/atendimento';
@@ -37,6 +35,7 @@ Mongoose.connect(uristring, function (err, res) {
     console.log ('Succeeded connected to: ' + uristring);
   }
 });
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

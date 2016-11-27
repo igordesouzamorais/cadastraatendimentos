@@ -1,4 +1,7 @@
 var Mongoose = require('mongoose');
+var autoIncrement = require('mongoose-auto-increment');
+
+autoIncrement.initialize(Mongoose.connection);
 
 var atendimentoSchema = new Mongoose.Schema({
   cliente: String,
@@ -13,6 +16,14 @@ var atendimentoSchema = new Mongoose.Schema({
   data: Date
 });
 
+atendimentoSchema.plugin(autoIncrement.plugin, {
+    model: 'Atendimento',
+    field: 'id_origen',
+    startAt: 1,
+    incrementBy: 1
+});
+
 var Atendimento = Mongoose.model('Atendimento', atendimentoSchema);
+
 
 module.exports = Atendimento;
