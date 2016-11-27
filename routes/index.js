@@ -5,7 +5,7 @@ var Atendimento = require('../models/atendimento');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('cadastrar');
 });
 
 router.get('/cadastro', function(req, res, next){

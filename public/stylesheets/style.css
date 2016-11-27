@@ -37,7 +37,7 @@ nav ul li{
 	float: left;
 	height: 80px;
 	line-height: 80px;
-	width: 50%;
+	margin-right: 10px;
 	text-align: center;
 }
 
@@ -51,7 +51,6 @@ nav ul li a{
 nav ul li a:hover{
 	transition: all ease-in-out .5s;
 	text-decoration: underline;
-	font-size: 1.3em;
 }
 
 nav h1{
